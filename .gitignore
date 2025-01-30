@@ -1,0 +1,25 @@
+# Dossiers à ignorer
+
+build/
+bin/
+out/
+target/
+classes/
+
+# Fichiers à ignorer
+*.jar
+*.war
+*.ear
+*.log
+
+# Fichiers spécifiques à Spring Boot
+
+application.yml
+
+# Fichiers spécifiques à IntelliJ IDEA
+
+
+# Fichiers spécifiques à Eclipse
+.classpath
+.project
+.settings/
