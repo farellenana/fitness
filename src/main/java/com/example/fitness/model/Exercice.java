@@ -9,8 +9,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
+
 @AllArgsConstructor
+@NoArgsConstructor
 public class Exercice {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,6 +35,8 @@ public class Exercice {
         private int series; // Nombre de séries
         private String urlVideo;
         private String urlImage;
+
+
 
 
         // Getters et Setters

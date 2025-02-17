@@ -76,48 +76,4 @@ public class AuthController {
     }
 
 
-
-
-
-//    private final UserService userService;
-//    private final AuthenticationManager authenticationManager;
-//    private final JwtService jwtService;
-//
-//    public AuthController(UserService userService, AuthenticationManager authenticationManager, JwtService jwtService) {
-//        this.userService = userService;
-//        this.authenticationManager = authenticationManager;
-//        this.jwtService = jwtService;
-//    }
-//
-//
-//    @PostMapping("/register")
-//    public ResponseEntity<String> registerUser(@RequestBody User user) {
-//        if (userService.findByEmail(user.getEmail()).isPresent()) {
-//            return ResponseEntity.badRequest().body("Email already in use");
-//        }
-//        userService.registerUser(user);
-//        return ResponseEntity.ok("User registered successfully");
-//    }
-//
-//    @PostMapping("/login")
-//    public ResponseEntity<String> login(@RequestBody AuthRequest authRequest) {
-////        authenticationManager.authenticate(
-////                new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
-////        );
-//        try {
-//            authenticationManager.authenticate(
-//                    new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
-//            );
-//        } catch (AuthenticationException e) {
-//            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials");
-//        }
-//        UserDetails userDetails = userService.loadUserByUsername(authRequest.getUsername());
-//        String token = jwtService.generateToken(userDetails.getUsername());
-//
-//        return ResponseEntity.ok(token);
-//
-////        UserDetails userDetails = userService.loadUserByUsername(authRequest.getUsername());
-////        return jwtService.generateToken(userDetails.getUsername());
-//    }
-
 }

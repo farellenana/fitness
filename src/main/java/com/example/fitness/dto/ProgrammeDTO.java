@@ -12,12 +12,13 @@ public class ProgrammeDTO {
 
     private Long programmeID;
     private Long userID;
+    private Long objectifID;
     private String nomProgramme;
     private String description;
-    private String typeObjectif;
     private Date dateDebut;
     private Date dateFin;
     private boolean estActif;
+
 
     public Long getProgrammeID() {
         return programmeID;
@@ -51,14 +52,6 @@ public class ProgrammeDTO {
         this.description = description;
     }
 
-    public String getTypeObjectif() {
-        return typeObjectif;
-    }
-
-    public void setTypeObjectif(String typeObjectif) {
-        this.typeObjectif = typeObjectif;
-    }
-
     public Date getDateDebut() {
         return dateDebut;
     }
@@ -81,5 +74,13 @@ public class ProgrammeDTO {
 
     public void setEstActif(boolean estActif) {
         this.estActif = estActif;
+    }
+
+    public Long getObjectifID() {
+        return objectifID;
+    }
+
+    public void setObjectifID(Long objectifID) {
+        this.objectifID = objectifID;
     }
 }

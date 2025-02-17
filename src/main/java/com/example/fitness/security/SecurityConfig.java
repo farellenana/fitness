@@ -36,7 +36,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/public/**").permitAll()
                         .requestMatchers("/register", "/login").permitAll() // Autoriser l'accès public
                         .requestMatchers("/api/admin/**").hasAuthority("USER")
-                        .requestMatchers("/programmes/**", "/exercices/**" , "/objectifs/**", "/plan/**", "/seance/**").permitAll()
+                        .requestMatchers("/programmes/**","/users/**", "/exercices/**" , "/objectifs/**", "/plan/**", "/seance/**" , "/category/**", "/exercices/**", "/upload/**").permitAll()
 //                        .requestMatchers("/api/programmes/**").hasRole("ADMIN")
                         .anyRequest().authenticated()  // Toutes les autres requêtes nécessitent une authentification
                 )

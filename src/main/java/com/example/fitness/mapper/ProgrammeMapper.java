@@ -11,9 +11,11 @@ import org.mapstruct.factory.Mappers;
 public interface ProgrammeMapper {
 
     @Mapping(target = "userID", expression = "java(programme.getUser() != null ? programme.getUser().getId() : null)")// Associer userID dans ProgrammeDTO
+    @Mapping(target = "objectifID", expression = "java(programme.getObjectif() != null ? programme.getObjectif().getObjectifID() : null)")
     ProgrammeDTO toDto(Programme programme);
 
     @Mapping(source = "userID", target = "user.id")// Associer userID à l'entité Programme
+    @Mapping(target = "objectif.objectifID", source = "objectifID")
     Programme toEntity(ProgrammeDTO programmeDTO);
 
 //    @Mapping(source = "user.id", target = "userID")// Associer userID dans ProgrammeDTO

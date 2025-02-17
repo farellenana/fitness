@@ -19,6 +19,5 @@ public interface ProgrammeRepository  extends JpaRepository<Programme, Long> {
     // Récupérer un programme par son nom
     Optional<Programme> findByNomProgramme(String nomProgramme);
 
-    // Récupérer tous les programmes ayant un objectif spécifique
-    List<Programme> findByTypeObjectif(String typeObjectif);
+
 }

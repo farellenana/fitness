@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -68,6 +69,13 @@ public class UserService {
 
 
 
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
+
+    public Optional<User> findUserById(Long id) {
+        return userRepository.findById(id);
+    }
 
 
 

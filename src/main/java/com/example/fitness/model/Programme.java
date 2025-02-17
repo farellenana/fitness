@@ -25,8 +25,10 @@ public class Programme {
     @Column(length = 500)
     private String description; // Description du programme
 
-    @Column(length = 50)
-    private String typeObjectif; // Perte de poids, Gain musculaire, Endurance, etc.
+
+    @ManyToOne
+    @JoinColumn(name = "objectifID")
+    private Objectifs objectif;
 
     private Date dateDebut;
     private Date dateFin;
@@ -65,12 +67,12 @@ public class Programme {
         this.description = description;
     }
 
-    public String getTypeObjectif() {
-        return typeObjectif;
+    public Objectifs getObjectif() {
+        return objectif;
     }
 
-    public void setTypeObjectif(String typeObjectif) {
-        this.typeObjectif = typeObjectif;
+    public void setObjectif(Objectifs objectif) {
+        this.objectif = objectif;
     }
 
     public Date getDateDebut() {
